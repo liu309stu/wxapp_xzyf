@@ -1,0 +1,6 @@
+[submodule "code1"]
+	path = code1
+	url = https://github.com/liu309stu/wxapp_xzyf.git
+[submodule "flask_server"]
+	path = flask_server
+	url = https://github.com/liu309stu/wxapp_xzyf.git
