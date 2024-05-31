@@ -1,0 +1,19 @@
+
+.map_container{ 
+  height: 420px; 
+  width: 100%; 
+} 
+.map { 
+  height: 100%; 
+  width: 100%; 
+}
+.rgc_info {
+  padding: 5px;
+}
+.rgc_info {
+  display: block;
+}
+.input{
+  border: 1px solid rgb(161, 161, 161);
+  margin: 0 5px;
+}

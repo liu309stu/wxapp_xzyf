@@ -1,0 +1,62 @@
+<view>
+<!-- 由onload给出 -->
+
+<swiper class="swi">
+  <swiper-item class="swit" wx:for="{{list_swi}}">
+    <image src="{{item}}" mode=""/>
+  </swiper-item>
+</swiper>
+
+<view class="top">
+    学子游方
+</view>
+
+<scroll-view class = 'scr'>
+  <grid-view type="aligned" class="gri" cross-axis-count="4" >
+  <view wx:for="{{list_s}}" data-index="{{index}}" bind:tap="bartap">{{item}}</view>
+  </grid-view>
+</scroll-view>
+
+<view class="sights">
+  <view class="sights-a" bind:tap="tapsights">
+    <text>景区推荐</text>
+    <view bind:tap="tapsights">>>></view>
+  </view>
+  <view wx:for="{{list_sights}}" class="card" bind:tap="tapsightdetail" data-id="{{item.id}}">
+    <image src="{{url + item.files[0]}}" mode=""/>
+    <view class="c1">
+        <view class="c1-1">{{item.sight_name}}</view>
+        <view class="c1-2" style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden; height: 40px; font-size: 14px;">
+        {{item.sight_hot}}
+        </view>
+    </view>
+  </view>
+</view>
+
+<view class="sights">
+  <view class="sights-a">
+    <text>推荐游记</text>
+    <view bind:tap="tapnotesmore">>>></view>
+  </view>
+</view>
+
+<scroll-view  type="custom">
+    <grid-view type="masonry" cross-axis-count="2">
+      <view hover-class="none" data-index="{{item.post_id}}" bind:tap="navtap" class="navview" wx:for="{{list_notes}}" >
+        <image style="width: 100%" src="{{url + item.files[0]}}" mode="widthFix"/>
+        <view class="nav-ti">{{item.post_title}}</view> 
+        <view class="nav-de" style="width: 100%">
+          <image style="width: 25px; height: 25px; border-radius: 100%; border: 0.2px gray solid; position: relative; left: 4rpx; top: -4rpx" src="{{url + item.image_head}}" mode=""/>
+          <text style="position: relative; left: 48rpx; top: -6px">{{item.username}}</text>
+          <image style="width: 25px; height: 25px; position: fixed; left: 75%; {{''}} " src="/image/love.png" catch:tap="love"  data-id="{{item.post_id}}" mode="" />
+          <text style="width: 20px; position:fixed; right: 0; left: 90%; ">{{item.post_love_num}}</text>
+        </view>
+      </view>
+    </grid-view>
+  </scroll-view>
+
+<!-- <navigator url="/pages/sight_list/sight_list">1</navigator>
+<navigator url="/pages/sight_detail/sight_detail">1</navigator>
+<navigator url="/pages/sight_update/sight_update">s</navigator> -->
+
+</view>

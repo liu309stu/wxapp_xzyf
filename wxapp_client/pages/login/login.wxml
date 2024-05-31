@@ -1,0 +1,35 @@
+<view class="container"> 
+<!-- 下面的这个图片最后要使用服务器发送 ，不然代码质量是有问题的 -->
+
+  <view class="login-icon"> 
+    <image class="login-img" src="https://s1.imagehub.cc/images/2024/04/05/e4b15e54a7d5e8208bc65fd6981d8d15.jpeg"></image> 
+  </view> 
+  <view class="login-from"> 
+ 
+    <!--账号--> 
+    <view class="inputView"> 
+      <image class="nameImage" src="/image/name.png"></image> 
+      <label class="loginLab">账号</label> 
+      <input class="inputText" placeholder="请输入账号" bindinput="phoneInput" /> 
+    </view> 
+    <view class="line"></view> 
+ 
+    <!--密码--> 
+    <view class="inputView"> 
+      <image class="keyImage" src="/image/key.png"></image> 
+      <label class="loginLab">密码</label> 
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+    </view> 
+ 
+    <!--按钮--> 
+    <view class="loginBtnView"  style="display: flex; height: 40px"> 
+      <navigator url="/pages/register/register?id=0" style="width: 20%; margin: auto; color: blue">注册</navigator>
+      <button class="loginBtn" type="primary" size="{{primarySize}}" 
+loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" 
+bindtap="login" style="width: 70%; padding-top: 0; margin-top: 5px">登录</button> 
+    </view> 
+  </view> 
+</view> 
+
+
+

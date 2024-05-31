@@ -1,0 +1,25 @@
+<!--pages/sight_detail/sight_detail.wxml-->
+<view class="body">
+<swiper class="top">
+  <swiper-item wx:for="{{msg.files}}" class="swi">
+    <image src="{{url + item}}" mode=""/>
+  </swiper-item>
+</swiper>
+
+
+<view class="text">
+  <text>{{msg.sight_name}}</text> 
+  <view class="line"></view>
+  <text>景区热点</text>
+  <text style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden;">{{msg.sight_hot}}</text>
+  <view class="line"></view>
+  <text>文化背景</text>
+  <text style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden;">{{msg.sight_culture}}</text>
+  <view class="line"></view>
+  <text>详细介绍</text>
+  <text style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden;">{{msg.sight_culture}}</text>
+  <view class="line"></view>
+  <text>地址 ： {{msg.sight_location}}</text>
+</view>
+
+</view>

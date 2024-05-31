@@ -1,0 +1,23 @@
+/* pages/sight_update/sight_update.wxss */
+
+
+.all{
+  display: grid;
+}
+
+.scroll-x {
+  position: relative;
+  left: 2%;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.scroll-x image{
+  width: 80px;
+  height: 80px;
+  border: white solid 0.01px;
+  border-radius: 10px;
+  margin: 2px;
+  display: inline-block;
+}
+

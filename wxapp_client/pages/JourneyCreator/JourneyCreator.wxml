@@ -1,0 +1,36 @@
+<view class="container">
+    <scroll-view scroll-x class="scroll-x">
+    <!-- longtap 还有 tap -->
+        <image src="{{item}}" mode="" wx:for="{{imageUrl}}" mode="aspectFit" data-index="{{index}}" bind:tap="image_pre" bind:longtap="iamge_del" />
+        <image src="/image/add_2.png" mode="" bind:tap="iamgeadd" />
+    </scroll-view>
+    <view class="body">
+      <input type="text" maxlength="20" placeholder="输入标题获得的星星越多哟~" value="{{titledata}}" bindinput="titleinput" />
+      <view class="line"></view>
+      <textarea value="" placeholder="添加正文" value="{{textdata}}" maxlength="10000000" bindinput="textinput" />
+      <view class="line"></view>
+      <view class="msg" bind:tap="location_add">
+        <image style="position: relative; top: 10rpx" src="/image/loc.png" mode=""/>
+        <text style="position: relative; left: 31rpx; top: 11rpx">{{location}}</text>
+        <image style="position: absolute; right: 10%" src="/image/more.png" mode=""/>
+      </view>
+      <view class="msg" bind:tap="select_pri">
+        <image style="position: relative; top: 10rpx" src="/image/key.png" mode=""/>
+        <text style="position: relative; left: 31rpx; top: 11rpx">{{isprivate_msg}}</text>
+        <image style="position: absolute; right: 10%" src="/image/more.png" mode=""/>
+      </view>
+    </view>
+
+<view class="bottom">
+<view class="bottom-save" bind:tap="aitap">
+<image src="/image/my.png" mode=""/>
+<text>AI修饰</text>
+</view>
+    <view class="bottom-fb" bind:tap="publish">
+       <text >{{isrest==0 ? '发布游记' : '修改成功并发布'}}</text>
+    </view>
+</view>
+
+
+
+</view>

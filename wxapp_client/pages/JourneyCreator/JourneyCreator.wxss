@@ -1,0 +1,104 @@
+.container{
+  width: 100%;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.scroll-x {
+  position: relative;
+  left: 2%;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.scroll-x image{
+  width: 80px;
+  height: 80px;
+  border: white solid 0.01px;
+  border-radius: 10px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: gainsboro;
+  margin: 2px;
+}
+
+.body{
+  width: calc(100% - 8%);
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: white;
+}
+
+.body input{
+  height: 40px;
+  font-size: 18px;
+}
+
+.body textarea{
+  height: 200px;
+  width: 100%;
+}
+
+.msg {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 30px;
+  font-size: 12px;
+  width: 100%;
+  margin: 2px;
+}
+
+.msg image{
+  width: 20px;
+  height: 20px;
+}
+
+.bottom{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-fb{
+  height: inherit;
+  width: 80%;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: red;
+  position: absolute;
+  right: 2%;
+  bottom: 5px;
+
+}
+.bottom-fb text{
+  position: relative;
+  left: 0rpx;
+   top: 25rpx; 
+   color: white;
+}
+
+
+.bottom-save{
+  display: grid;
+  position: relative;
+  left: 5%;
+  top: 20%;
+}
+.bottom-save text{
+  color: grey;
+  font-size: 8px;
+  position: relative; left: -4rpx; top: 0rpx
+}
+.bottom-save image{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%
+}

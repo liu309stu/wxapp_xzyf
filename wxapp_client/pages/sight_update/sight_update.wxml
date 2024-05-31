@@ -1,0 +1,25 @@
+<!--pages/sight_update/sight_update.wxml-->
+<view class="all">
+<text>景区数据上传接口</text>
+
+<text>景区名称</text>
+<input type="text" placeholder="请输入景区名称" maxlength="200" bindinput="input1"/>
+<text>景区地点</text>
+<input type="text" placeholder="请输入景区地点" maxlength="200" bindinput="input2"/>
+<text>景区热点</text>
+<input type="text" placeholder="请输入景区热点" maxlength="200" bindinput="input3"/>
+<text>景区文化</text>
+<textarea value="" placeholder="请输入景区文化" maxlength="100000" bindinput="input4"/>
+<text>景区介绍</text>
+<textarea value="" placeholder="请输入景区介绍" maxlength="100000" bindinput="input5"/>
+<text>景区图片</text>
+
+<scroll-view scroll-x class="scroll-x">
+    <!-- longtap 还有 tap -->
+        <image src="{{item}}" mode="" wx:for="{{imageUrl}}" mode="aspectFit" data-index="{{index}}" bind:tap="image_pre" bind:longtap="iamge_del" />
+        <image src="/image/add_2.png" mode="" bind:tap="iamgeadd" />
+    </scroll-view>
+<button bind:tap="tap1">上传</button>
+</view>
+
+

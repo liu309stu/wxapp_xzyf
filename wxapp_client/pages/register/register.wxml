@@ -1,0 +1,45 @@
+<!--pages/register/register.wxml-->
+<view class="container" style="height: auto">
+  <view class="login-icon"> 
+    <image class="login-img" src="https://s1.imagehub.cc/images/2024/04/05/e4b15e54a7d5e8208bc65fd6981d8d15.jpeg"></image> 
+  </view> 
+<view class="login-form">
+  <view class="inputView"> 
+      <label class="loginLab">头像</label> 
+      <image src="{{image_head}}" mode="" class="signimage" bind:tap="{{list[0]}}"/>
+    </view> 
+    <view class="line"></view> 
+  <view class="inputView"> 
+      <label class="loginLab">账号</label> 
+      <input class="inputText" placeholder="请输入账号" bindinput="idinput" value="{{user_id}}"  disabled="{{disabled}}"/> 
+    </view> 
+    <view class="line"></view> 
+    <view class="inputView"> 
+      <label class="loginLab">昵称</label> 
+      <input class="inputText" placeholder="请输入昵称" bindinput="nameinput"  value="{{username}}" disabled="{{disabled}}"/> 
+    </view> 
+    <view class="line"></view> 
+    <view class="inputView"> 
+      <label class="loginLab">密码</label> 
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="pwdinput" value="{{passwd}}" disabled="{{disabled}}"/> 
+    </view> 
+    <view class="inputView"> 
+      <label class="loginLab">签名</label> 
+      <input class="inputText" placeholder="请输入签名" bindinput="siginput"  value="{{signature}}" disabled="{{disabled}}"/> 
+    </view> 
+    <view class="line"></view> 
+    <view class="inputView"> 
+      <label class="loginLab">标签</label> 
+      <input class="inputText" placeholder="请输入标签" value="{{notes}}" bindinput="noteinput"  disabled="{{disabled}}"/> 
+    </view> 
+
+    <view class="line"></view> 
+    <view class="inputView"> 
+      <label class="loginLab" bind:tap="{{list[1]}}">位置</label> 
+      <input class="inputText" placeholder="请输入位置" value="{{location}}" bindinput="adsinput" disabled="{{disabled}}" /> 
+    </view> 
+    <view class="loginBtnView" > 
+      <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"  bindtap="{{list[2]}}"  style="position: relative; left: 0rpx; top: -42rpx">{{pagefor}}</button> 
+    </view> 
+</view>
+</view>

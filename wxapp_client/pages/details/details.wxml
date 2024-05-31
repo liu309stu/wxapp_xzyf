@@ -1,0 +1,56 @@
+<!--pages/details/details.wxml-->
+<view>
+
+<view class="top">
+    <image src="{{url + message.image_head}}" mode=""/>
+    <text class="top-t1">{{message.username}}</text>
+    <view wx:if="{{gloablData.user_id == message.user_id}}">
+        <text class="top-t2" >关注</text>
+    </view>
+</view>
+
+<view class="line"></view>
+<view class="type1" wx:if="{{mode_index == 0}}" bind:tap="correct">
+<text class="title">{{message.post_title}} </text>
+<text class="article" style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden;">{{message.post_article}}</text>
+<scroll-view class = 'scr'>
+  <grid-view type="aligned" class="gri" cross-axis-count="3" style="">
+  <image src="{{item}}" mode="aspectFit" wx:for="{{message.files}}" data-index="{{index}}" bind:tap="pre_view" />
+  </grid-view>
+</scroll-view>
+</view>
+
+<view class="type2" bind:tap="correct" wx:if="{{mode_index == 1}}">
+    <swiper class="swi">
+      <swiper-item wx:for="{{message.files}}" data-index="{{index}}" bind:tap="pre_view" class="swit">
+        <image style="width: 100%" src="{{item}}" mode="aspectFit"  />
+      </swiper-item>
+    </swiper>
+  <view class="line"></view>
+    <text class="title">{{message.post_title}} </text>
+    <text class="article" style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden;">{{message.post_article}}</text>
+</view>
+
+
+<view class="commetinput">
+<image src="/image/add.png" mode=""/>
+<input type="text" placeholder="请输入评论" />
+<text>发布评论</text>
+</view>
+
+<view class="comment" wx:for="{{comment}}" >
+  <view class="comment-top">
+    <image src="{{url + item.user_image}}" mode=""/>
+    <text>{{item.name}}</text>
+  </view>
+  <view class="comment-msg">
+    <text>{{item.comment_text}}</text>
+        <scroll-view class = 'scr'>
+            <grid-view type="aligned" class="gri" cross-axis-count="3" style="">
+            <image src="{{url + j}}" wx:for-item="j" mode="aspectFit" wx:for="{{item.comment_image}}"  data-index="{{index}}" />
+            </grid-view>
+        </scroll-view>  
+  </view>
+</view>
+
+</view>

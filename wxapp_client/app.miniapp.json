@@ -1,0 +1,27 @@
+{
+  "framework": {
+    "name": "mpvue",
+    "version": "2.0.0",
+    "global": true
+  },
+  "plugin": {
+    "list": [
+      {
+        "id": "plugin1",
+        "version": "1.0.0"
+      },
+      {
+        "id": "plugin2",
+        "version": "2.0.0"
+      }
+    ]
+  },
+  "environment": {
+    "development": {
+      "appId": "wx0443dcb1427a39b6"
+    },
+    "production": {
+      "appId": "wx0443dcb1427a39b6"
+    }
+  }
+}

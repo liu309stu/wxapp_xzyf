@@ -1,0 +1,17 @@
+
+
+  <scroll-view  type="custom">
+    <grid-view type="masonry" cross-axis-count="2">
+      <view hover-class="none" data-index="{{item.post_id}}" bind:tap="navtap" class="navview" wx:for="{{list}}" >
+        <image style="width: 100%" src="{{url + item.files[0]}}" mode="widthFix"/>
+        <view class="nav-ti">{{item.post_title}}</view> 
+        <view class="nav-de" style="width: 100%">
+          <image style="width: 25px; height: 25px; border-radius: 100%; border: 0.2px gray solid; position: relative; left: 4rpx; top: -4rpx" src="{{url + item.image_head}}" mode=""/>
+          <!-- {{url + item.imagehead}} -->
+          <text style="position: relative; left: 48rpx; top: -6px">{{item.username}}</text>
+          <image style="width: 25px; height: 25px; position: fixed; left: 75%; {{''}} " src="/image/love.png" catch:tap="love"  data-id="{{item.post_id}}" mode="" />
+          <text style="width: 20px; position: fixed; right: 0; left: 90%; ">{{item.post_love_num}}</text>
+        </view>
+      </view>
+    </grid-view>
+  </scroll-view>

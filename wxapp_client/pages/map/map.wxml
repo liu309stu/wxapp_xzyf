@@ -1,0 +1,13 @@
+
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<view class="rgc_info"> 
+  <view>经度：{{longitude}}</view>
+  <view>纬度：{{latitude}}</view> 
+</view>
+<view>
+    <input class="input" placeholder="输入地址" type="text" value="{{searchText}}"
+     bindinput="handleInputChange"/>
+    <button bindtap="search">搜索</button>
+</view>

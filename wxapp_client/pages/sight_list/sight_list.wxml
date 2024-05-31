@@ -1,0 +1,12 @@
+<!--pages/sight_list/sight_list.wxml-->
+<view wx:for="{{list_sights}}" class="card" bind:tap="tapsightdetail" data-id="{{item.id}}">
+    <image src="{{url + item.files[0]}}" mode=""/>
+    <view class="c1">
+        <view class="c1-1">{{item.sight_name}}</view>
+        <view class="c1-2" style="word-break:break-word;/* white-space:nowrap; */text-overflow:ellipsis;overflow:hidden; height: 40px; font-size: 14px;">
+        {{item.sight_hot}}
+        </view>
+    </view>
+  </view>
+
+

@@ -1,0 +1,126 @@
+view {
+
+}
+
+.swi{
+  width: calc(100%-4%);
+  margin: 2%;
+}
+
+.swit{
+  width: 100%;
+  height: 100px;
+}
+
+.swit image{
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(231, 223, 223);
+}
+
+
+
+.top{
+  height: 30px;
+  margin: 4px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(233, 198, 198);
+}
+
+.scr{
+  width: calc(100%-4%);
+  margin: 2%;
+}
+
+.gri{
+  width: 100%;
+  border: azure 1px solid;
+}
+
+
+.gri view{
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  color: rgb(233, 212, 227);
+  text-align: center;
+  border: azure 1px solid;
+}
+
+.sights{
+  display: grid;
+  width: calc(100%-4%);
+  margin: 2%;
+  display: grid;
+}
+
+.sights-a{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 20px;
+  width: 100%;
+}
+
+.sights-a text{
+  font-size: 16px;
+  position: relative;
+  left: 2%;
+  color: rgb(247, 207, 207);
+}
+
+.sights-a view{
+  font-size: 16px;
+  position: relative;
+  left: 70%;
+}
+
+.card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 80px;
+  margin: 2px;
+}
+
+.card image{
+  width: 160px;
+  height: calc(100% - -4%);
+  border: 1px solid rgb(224, 238, 212);
+}
+
+.c1{
+  display: inline-block;
+  height: inherit;
+  width: 200px; 
+  left: 29rpx; 
+  position: relative;
+}
+
+.c1-1{
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+}
+
+.c1-2{
+  /* display: inline-block;
+  width: 100%;
+  text-indent: 2em;
+  height: calc(100% - 30px);
+  font-size: 13px;
+  overflow: hidden; */
+}
+
+.c1-2 text{
+  overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
